@@ -25,5 +25,4 @@ def create_app():
     from .databaseService import bp_entregas
     app.register_blueprint(bp_entregas)
 
-    app.debug=True
     return app
