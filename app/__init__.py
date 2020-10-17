@@ -1,7 +1,3 @@
-from environs import Env
-env = Env()
-env.read_env()
-
 import os
 from flask import Flask
 from flask_migrate import Migrate
