@@ -34,6 +34,7 @@ Mako = "==1.1.3"
 MarkupSafe = "==1.1.1"
 Pillow = "==8.0.0"
 Environs = "==4.1.0"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"
