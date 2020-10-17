@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <style>
+        .objectImage {
+            width: 330px;
+            height: 190px;
+            object-fit: none;
+            object-position: right;
+        }
+        </style>
+        <nav class="site-header sticky-top py-1 bg-dark">
+            <div class="container d-flex flex-column flex-md-row justify-content-between">
+              <div class="col">
+                <p class="py-2 d-none d-md-inline-block text-white h2" href="#"><strong>Catía Variedades</strong></p>
+              </div>
+              
+              <div class="col-md-auto">
+                <a class="py-2 d-md-inline-block text-white h4" href="/"><strong>Home</strong></a>
+              </div>
+              <div class="col col-md-auto">
+                <a class="py-2 d-md-inline-block text-white h4" href="/delivery"><strong>Delivery</strong></a>
+              </div>  
+              <div class="col col-md-auto">
+                <a class="py-2 d-md-inline-block text-white h4" href="/estoque"><strong>Estoque</strong></a>
+              </div> 
+              <div class="col col-md-auto">
+                <a class="py-2 d-md-inline-block text-white h4" href="/romaneio"><strong>Romaneio</strong></a>
+              </div> 
+              <div class="col col-md-auto">
+                <a class="py-2 d-md-inline-block text-white h4" href="/etiquetas"><strong>Etiquetas</strong></a>
+              </div> 
+
+            </div>
+        </nav>
+    {% endblock %}
+  </head>
+
+  <body>
+    {% block content %}
+    
+    {% endblock %}
+  </body>
+</html>

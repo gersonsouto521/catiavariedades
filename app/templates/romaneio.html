@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento - Romaneio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style type="text/css">
+        body,table {-webkit-print-color-adjust: exact;}
+    </style>
+</head>
+<body>
+
+  <div class="row border border-dark p-1 mt-5 mr-5 ml-5 bg-light">
+    <div class="col col-sm-2">
+    </div>
+    <div class="col-sm">
+      <p class="h2 text-center"><strong>Loja - Cátia Variedades</strong></p> 
+      <p class="h4 text-center">CNPJ: 11.526.452/0001-28</p> 
+      <p class="h4 text-center">Rio Amazonas 91 Quadra 7 / Cia 01</p> 
+      <p class="h4 text-center">Simões Filho-BA</p> 
+      <p class="h4 text-center">CEP: 43700-000</p> 
+    </div>
+    <div class="col col-sm-2 pt-4">
+      <img src="static/logo.jpg" class="rounded float-right border border-dark" alt="logo">
+    </div>
+    </div>
+
+    <div class="border border-dark pl-5 pr-5 mt-3 mr-5 ml-5 bg-light">
+      <div class="row">
+        <div class="col-sm">
+          <p class="h4"><strong>Motorista: </strong>Nadson</p> 
+          <p class="h4"><strong>Data: </strong>{{ date }}</p> 
+        </div>
+        <div class="col-sm">
+          <p class="h4 text-right"><strong>Hora Saída</strong> ___:___</p> 
+          <p class="h4 text-right"><strong>Hora Chegada</strong> ___:___</p> 
+        </div>
+      </div>
+    </div>
+
+    <div class="border border-dark pl-5 pr-5 pt-2 pb-2 mt-3 mr-5 ml-5">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><p class="h5">Quantidade</p></th>
+            <th scope="col"><p class="h5">Nome do Produto</p></th>
+            <th scope="col"><p class="h5">Nome do Cliente</p></th>
+            <th scope="col"><p class="h5">Telefone</p></th>
+            <th scope="col"><p class="h5">Endereço</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for x in range(0,tamanho) %}
+          <tr>
+            <th scope="row">{{df.at[x,'Quantity']}}</th>
+            <td>{{df.at[x,'Product Name']}}</td>
+            <td>{{df.at[x,'Customer Name']}}</td>
+            <td>{{df.at[x,'Phone']}}</td>
+            <td>{{df.at[x,'Address']}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+</body>
+
+</html>

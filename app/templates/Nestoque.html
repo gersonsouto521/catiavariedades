@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}Estoque{% endblock %}
+</head>
+<body>
+    {% block content %}
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th class="text-white" scope="col">IMAGEM</th>
+          <th class="text-white" scope="col">SKU</th>
+          <th class="text-white" scope="col">NOME</th>
+          <th class="text-white" scope="col">QT ATUAL</th>
+          <th class="text-white" scope="col">VALOR CP</th>
+          <th class="text-white" scope="col">VALOR VD</th>
+          <th class="text-white" scope="col">FORNECEDOR</th>
+          <th class="text-white" scope="col">QT CATIA</th>
+          <th class="text-white" scope="col">QT GERSON</th>                
+        </tr>
+      </thead>
+      <tbody>
+        {% for x in range(0,tamanho) %}
+        <tr>
+          <th scope="row"><img class="border border-dark" src="{{df[x]['IMAGEM']}}" alt="some text" width=80 height=60></th>
+          <td>{{df[x]['SKU']}}</td>
+          <td>{{df[x]['NOME']}}</td>
+          <td>{{df[x]['QT_ATUAL']}}</td>
+          <td>R$ {{df[x]['VLR_COM']}}</td>
+          <td>R$ {{df[x]['VLR_VEN']}}</td>
+          <td>{{df[x]['FORNECEDOR']}}</td>
+          <td>{{df[x]['QT_CATIA']}}</td>
+          <td>{{df[x]['QT_GERSON']}}</td>
+        </tr>
+        {% endfor %}
+        
+      </tbody>  
+    </table>
+    {% endblock %}
+</body>
+</html>

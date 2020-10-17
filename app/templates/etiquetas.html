@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento - Etiquetas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style type="text/css">
+      .break{ page-break-before: always;}
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+  {% for x in range(0,sizeData,2) %}
+  {% if x !=0 and  x//2 % 4 == 0 and sizeData > x+1 %}
+  <div class="row break">
+    <div class="col-sm p-2">
+      <div class="card border border-dark pl-2" style="width: 30rem;">
+        <img class="card-img-top" src="static/etiqueta.PNG" height="170" alt="Generic placeholder image">
+        <h4 class="card-title px-md-5">{{data.at[x,'Customer Name'][0:33]}}</h4>
+        <p class="card-text ">Estamos muito animados por ter ajudado você.<br>Obrigado pela sua compra!<br>Deixe-nos saber como foi a sua entrega, entre em contato com<br>support@wish.com</p>			
+      </div>
+    </div>
+    <div class="col-sm p-2">
+      <div class="card border border-dark pl-2" style="width: 30rem;">
+        <img class="card-img-top" src="static/etiqueta.PNG" height="170" alt="Generic placeholder image">
+        <h4 class="card-title px-md-5">{{data.at[x+1,'Customer Name'][0:33]}}</h4>
+        <p class="card-text ">Estamos muito animados por ter ajudado você.<br>Obrigado pela sua compra!<br>Deixe-nos saber como foi a sua entrega, entre em contato com<br>support@wish.com</p>			
+      </div>
+    </div>
+  </div>
+  {% elif sizeData > x+1 %}
+  <div class="row">
+    <div class="col-sm p-2">
+      <div class="card border border-dark pl-2" style="width: 30rem;">
+        <img class="card-img-top" src="static/etiqueta.PNG" height="170" alt="Generic placeholder image">
+        <h4 class="card-title px-md-5">{{data.at[x,'Customer Name'][0:33]}}</h4>
+        <p class="card-text ">Estamos muito animados por ter ajudado você.<br>Obrigado pela sua compra!<br>Deixe-nos saber como foi a sua entrega, entre em contato com<br>support@wish.com</p>			
+      </div>
+    </div>
+    <div class="col-sm p-2">
+      <div class="card border border-dark pl-2" style="width: 30rem;">
+        <img class="card-img-top" src="static/etiqueta.PNG" height="170" alt="Generic placeholder image">
+        <h4 class="card-title px-md-5">{{data.at[x+1,'Customer Name'][0:33]}}</h4>
+        <p class="card-text ">Estamos muito animados por ter ajudado você.<br>Obrigado pela sua compra!<br>Deixe-nos saber como foi a sua entrega, entre em contato com<br>support@wish.com</p>			
+      </div>
+    </div>
+  </div>
+  {% else %}
+  <div class="row">
+    <div class="col-sm p-2">
+      <div class="card border border-dark pl-2" style="width: 30rem;">
+        <img class="card-img-top" src="static/etiqueta.PNG" height="170" alt="Generic placeholder image">
+        <h4 class="card-title px-md-5">{{data.at[x,'Customer Name'][0:33]}}</h4>
+        <p class="card-text ">Estamos muito animados por ter ajudado você.<br>Obrigado pela sua compra!<br>Deixe-nos saber como foi a sua entrega, entre em contato com<br>support@wish.com</p>			
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
