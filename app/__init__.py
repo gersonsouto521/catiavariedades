@@ -1,3 +1,7 @@
+from environs import Env
+env = Env()
+env.read_env()
+
 import os
 from flask import Flask
 from flask_migrate import Migrate
@@ -21,4 +25,5 @@ def create_app():
     from .databaseService import bp_entregas
     app.register_blueprint(bp_entregas)
 
+    app.debug=True
     return app
